@@ -44,7 +44,7 @@ if [ -z "$(git status --porcelain)" ]; then
   exit 0
 fi
 
-git config user.name "Travis-CI"
+git config user.name "S"
 git config user.email "ap311036@gmail.com"
 git add --all
 git commit -m "docs(travis): publish documentation for $TRAVIS_COMMIT"
