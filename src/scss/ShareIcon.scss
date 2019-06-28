@@ -1,0 +1,19 @@
+.shareIcon {
+  height: 30px;
+  width: 30px;
+  font-size: 0;
+  text-indent: -9999pt;
+  background-size: cover;
+  background-color: #3a3a3a;
+  border-radius: 50%;
+  margin: 0 0 0 10px;
+  cursor: pointer;
+}
+
+.shareIcon-link {
+  background-image: url("/assets/icons/getlink.svg");
+}
+
+.shareIcon-facebook {
+  background-image: url("/assets/icons/fb.svg");
+}

@@ -1,0 +1,79 @@
+.metadata-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.metadata {
+  color: #999;
+  margin-right: calc(20px + .2vw);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &.is-border {
+    border: 1px solid;
+    font-size: 70%;
+    padding: calc(2px + .1vw) calc(2px + .1vw) calc(1px + .1vw);
+    border-radius: 2px;
+    line-height: 1;
+  }
+
+  &.is-white {
+    color: #fff
+  }
+
+  &.is-orange {
+    color: #f26f21
+  }
+
+  &.is-link {
+    color: #42ceff;
+    margin-right: calc(10px + .2vw);
+    font-size: calc(11px + .3vw);
+
+    &:hover {
+      color: #00a3d9;
+    }
+  }
+
+  .metadata-content {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .metadata-imdb {
+    margin-right: 6px;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  // plugin css rewrite
+  .metadata-myrate {
+    display: flex;
+    white-space: nowrap;
+
+    >span:first-child {
+      color: #fff
+    }
+
+    >span:last-child {
+      margin-left: calc(5px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .metadata-myrate-icon {
+    height: 1rem;
+    margin-right: 2px;
+  }
+}

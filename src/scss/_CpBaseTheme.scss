@@ -1,0 +1,54 @@
+* {
+  // Remove Blue border on Chrome
+  outline: none;
+  // Init Box-Sizing
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+
+  &::-webkit-scrollbar {
+    width: 2px;
+    background: #000;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #9e9e9e;
+  }
+
+}
+
+html {
+  font-family: $font-content;
+  font-weight: normal;
+  overflow-x: hidden;
+
+  &[lang='zh-TW'] {
+    font-family: $font-content-tw;
+    font-weight: $font-weight;
+
+    i {
+      font-style: normal; // 中文斜體
+    }
+  }
+
+  .font-condensed {
+    font-family: $font-title;
+
+    [lang='zh-TW'] & {
+      font-family: $font-content-tw;
+    }
+  }
+
+  .font-stroke {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+
+  color: $color-white;
+  background: $color-black;
+  -ms-overflow-style: scrollbar;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

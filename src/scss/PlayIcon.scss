@@ -1,0 +1,64 @@
+/**
+
+playicon in card 
+
+icon width = card.width 23%
+icon height = card.height 42%
+
+**/
+.play-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+
+  // in card object,
+  .card-image-wrapper & {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 23%;
+    height: 42%;
+  }
+
+}
+
+.play-icon-media {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url('/assets/icons/play-off.svg');
+  background-size: 100% 100%;
+
+  .card:hover &,
+  &:hover {
+    background: url('/assets/icons/play-on.svg');
+    background-size: 100% 100%;
+  }
+
+  // in card obejct 
+  .card-image-wrapper & {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:before {
+    content: '';
+    display: none;
+    background: url('/assets/icons/play-on.svg');
+  }
+}
+
+.play-icon-label {
+  margin-top: calc(5px + .2vw);
+  text-shadow: 0 0 4px #000;
+  text-transform: capitalize;
+  color: #cbcbcb;
+  font-size: 16px;
+
+  @media (min-width: 1400px) {
+    font-size: calc(16px + 0.5vw);
+  }
+}

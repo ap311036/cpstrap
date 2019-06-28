@@ -1,0 +1,24 @@
+.exclusive-label {
+  .card & {
+    height: 100%;
+  }
+}
+
+.exclusive-label-text {
+  height: 1.75em;
+}
+
+.exclusive-label img {
+  height: 100%;
+  display: block;
+}
+
+.tags-wrapper {
+  display: flex;
+  height: 1.9em;
+  line-height: 0;
+}
+
+body {
+  background: #000;
+}
