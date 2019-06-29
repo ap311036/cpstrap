@@ -12,7 +12,7 @@
     "build-css": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/index.scss dist/css/index.css && npm run copy-scss",
     "copy-scss": "rm -rf lib/scss && cp -r src/scss lib/scss",
     "build:docs": "cross-env WEBPACK_BUILD=production webpack --config ./webpack.docs.config.js --progress --colors",
-    "build": "npm run build-css && npm run build:lib && npm run build:esm && npm run build:umd",
+    "build": "npm run build:lib && npm run build:esm && npm run build:umd && npm run build-css",
     "build:umd": "rollup -c",
     "build:lib": "babel src --out-dir lib --ignore src/__tests__/",
     "build:esm": "cross-env BABEL_ENV=esm-dir babel src --out-dir es --ignore src/__tests__/",
