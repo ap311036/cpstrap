@@ -11,8 +11,13 @@ const env = process.env.WEBPACK_BUILD || process.env.NODE_ENV || 'development';
 const paths = [
   "/",
   "/components/",
+  "/components/button/",
+  "/components/card/",
   "/components/exclusivelabel/",
+  "/components/metadata/",
   "/components/playicon/",
+  "/components/shareicon/",
+  "/components/slick/",
   "/components/videolabel/",
   "/utilities/",
   "/utilities/colors/",
