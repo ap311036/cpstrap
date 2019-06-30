@@ -5,7 +5,7 @@ set -e
 BRANCH='master'
 BUILD_DIR='build/'
 REPOSITORY=`mktemp -d /tmp/boostrap.XXXXXX`
-GITHUB_REPO='ap311036/cpstrap.github.io'
+GITHUB_REPO='ap311036/ap311036.github.io'
 
 success() {
   echo -e "\033[32;1m$1"
