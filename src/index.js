@@ -3,6 +3,7 @@ export ExclusiveLabel from "./ExclusiveLabel";
 export Row from './Row';
 export Col from "./Col";
 export Card from "./Card";
+export Clamp from "./Clamp";
 export Slick from './Slick';
 export Navbar from './Navbar';
 export NavbarBrand from './NavbarBrand';

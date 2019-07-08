@@ -11,6 +11,10 @@ const items = [
     to: "/components/card/"
   },
   {
+    name: "Clamp",
+    to: "/components/clamp/"
+  },
+  {
     name: "ExclusiveLabel",
     to: "/components/exclusivelabel/"
   },

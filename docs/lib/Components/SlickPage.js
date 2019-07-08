@@ -11,7 +11,7 @@ export default class ExclusiveLabelPage extends React.Component {
   render() {
     return (
       <div>
-        <PageTitle title="ExclusiveLabel" />
+        <PageTitle title="Slick" />
         <div className="docs-example">
           <Slick />
         </div>

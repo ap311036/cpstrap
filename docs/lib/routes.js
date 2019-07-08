@@ -4,6 +4,7 @@ import Home from './Home';
 import ExclusiveLabelPage from "./Components/ExclusiveLabelPage";
 import PlayIconPage from "./Components/PlayIconPage";
 import CardPage from "./Components/CardPage";
+import ClampPage from "./Components/ClampPage";
 import SlickPage from "./Components/SlickPage";
 import VideoLabelPage from "./Components/VideoLabelPage";
 import ShareIconPage from "./Components/ShareIconPage";
@@ -23,6 +24,7 @@ const routes = (
       <IndexRedirect to="button/" />
       <Route path="button/" component={ButtonPage} />
       <Route path="card/" component={CardPage} />
+      <Route path="clamp/" component={ClampPage} />
       <Route path="exclusivelabel/" component={ExclusiveLabelPage} />
       <Route path="metadata/" component={MetaDataPage} />
       <Route path="slick/" component={SlickPage} />
