@@ -1,3 +1,7 @@
+## [1.0.11](https://github.com/ap311036/cpstrap/compare/1.0.10...1.0.11) (2019-07-08)
+
+
+
 ## [1.0.10](https://github.com/ap311036/cpstrap/compare/1.0.8...1.0.10) (2019-07-08)
 
 

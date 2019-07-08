@@ -1,5 +1,6 @@
 export Container from './Container';
 export ExclusiveLabel from "./ExclusiveLabel";
+export LikeIcon from "./LikeIcon";
 export Row from './Row';
 export Col from "./Col";
 export Card from "./Card";

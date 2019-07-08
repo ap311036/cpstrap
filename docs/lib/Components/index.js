@@ -19,6 +19,10 @@ const items = [
     to: "/components/exclusivelabel/"
   },
   {
+    name: "LikeIcon",
+    to: "/components/likeicon/"
+  },
+  {
     name: "PlayIcon",
     to: "/components/playicon/"
   },
