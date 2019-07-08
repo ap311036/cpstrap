@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, IndexRoute, IndexRedirect } from 'react-router';
 import Home from './Home';
 import ExclusiveLabelPage from "./Components/ExclusiveLabelPage";
+import LikeIconPage from "./Components/LikeIconPage";
 import PlayIconPage from "./Components/PlayIconPage";
 import CardPage from "./Components/CardPage";
 import ClampPage from "./Components/ClampPage";
@@ -26,6 +27,7 @@ const routes = (
       <Route path="card/" component={CardPage} />
       <Route path="clamp/" component={ClampPage} />
       <Route path="exclusivelabel/" component={ExclusiveLabelPage} />
+      <Route path="likeicon/" component={LikeIconPage} />
       <Route path="metadata/" component={MetaDataPage} />
       <Route path="slick/" component={SlickPage} />
       <Route path="shareicon/" component={ShareIconPage} />
