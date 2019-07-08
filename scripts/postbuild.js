@@ -5,8 +5,8 @@ var fs = require("fs");
 // ReactPopper) are properly set as optional globals. Specifically, do not
 // error if the user has not loaded these dependencies. Degrade gracefully.
 const files = [
-  __dirname + "/../dist/reactstrap.js",
-  __dirname + "/../dist/reactstrap.min.js"
+  __dirname + "/../dist/cpstrap.js",
+  __dirname + "/../dist/cpstrap.min.js"
 ];
 
 files.forEach(function(file) {
