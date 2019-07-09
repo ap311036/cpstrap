@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { mapToCssModules, tagPropType } from "./utils";
-import "./scss/ButtonGroup.scss";
 
 const propTypes = {
   tag: tagPropType,
