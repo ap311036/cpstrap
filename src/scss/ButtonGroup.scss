@@ -7,8 +7,8 @@
     transform: translate3d(0, 0, 0);
     white-space: nowrap;
 
-    &::-webkit-scrollbar-thumb {
-      background: transparent;
+    &::-webkit-scrollbar {
+      display: none;
     }
 
     .btn {
