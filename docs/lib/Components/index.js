@@ -7,6 +7,10 @@ const items = [
     to: "/components/button/"
   },
   {
+    name: "ButtonGroup",
+    to: "/components/buttongroup/"
+  },
+  {
     name: "Card",
     to: "/components/card/"
   },

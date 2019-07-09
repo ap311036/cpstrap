@@ -12,7 +12,7 @@ class Example extends React.Component {
   }
   onClickHandler() {
     const { fill } = this.state;
-    this.setState({ fill: fill ? false : true});
+    this.setState({ fill: !fill });
   }
   render() {
     const { fill } = this.state;

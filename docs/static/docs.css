@@ -2,6 +2,9 @@ body {
   background: #000;
   color: #fff;
 }
+.mb-10 {
+  margin-bottom: 10px;
+}
 
 .container-fluid {
   max-width: 1200px;

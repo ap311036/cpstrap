@@ -25,9 +25,18 @@ export default class ExclusiveLabelPage extends React.Component {
         <pre>
           <PrismCode className="language-jsx">
 {`ExclusiveLabel.propTypes = {
-  staticRoot: PropTypes.string, // default: ''
-  type: PropTypes.string, // default: 'img' [img|text]
-  lng: PropTypes.string // default: 'zh-tw' [zh-tw|en-us|id-id]
+  text: PropTypes.string,
+  maxLine: PropTypes.string, // default: 2
+  ellipsis: PropTypes.string // default: '...
+  afterEllipsisText: PropTypes.string, // default: 'MORE'
+  afterEllipsisClass: PropTypes.string, // default:'clamp-after-ellipsis'
+  basedOn: PropTypes.string, // default: 'letters'
+  isTrimRight: PropTypes.bool, // default: true
+  manualOpen: PropTypes.bool, // default: false
+  forceDisable: PropTypes.bool, // default: false
+  delay: PropTypes.number, //default: 0
+  openCallback: PropTypes.func
+  closeCallback: PropTypes.func
 }`}
           </PrismCode>
         </pre>

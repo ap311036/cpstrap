@@ -25,9 +25,10 @@ export default class LikeIconPage extends React.Component {
         <pre>
           <PrismCode className="language-jsx">
 {`LikeIcon.propTypes = {
-  staticRoot: PropTypes.string, // default: ''
-  type: PropTypes.string, // default: 'img' [img|text]
-  lng: PropTypes.string // default: 'zh-tw' [zh-tw|en-us|id-id]
+  placement: PropTypes.string,
+  overlay: PropTypes.string,
+  fill: PropTypes.string,
+  onClick: PropTypes.func,
 }`}
           </PrismCode>
         </pre>

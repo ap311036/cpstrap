@@ -1,35 +1,50 @@
 import React from 'react';
-import { Button } from 'cpstrap';
+import { Button, ButtonGroup } from 'cpstrap';
 
 const Example = (props) => {
   return (
     <div>
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        marginBottom: '20px',
-      }}>
-        <Button onClick={()=> alert('onClick')}>
+      <div>
+        <Button
+          className="col-md-12 col-lg-4 mb-10"
+          onClick={() => alert("onClick")}
+        >
           即將上架 5月28日
         </Button>
-        <Button color="orange-solid" onClick={()=> alert('onClick')}>
+        <Button
+          className="col-md-12 col-lg-4 mb-10"
+          color="orange-solid"
+          onClick={() => alert("onClick")}
+        >
           加入馬上看
         </Button>
-        <Button color="orange-solid" onClick={()=> alert('onClick')}>
+        <Button
+          className="col-md-12 col-lg-4 mb-10"
+          color="orange-solid"
+          onClick={() => alert("onClick")}
+        >
           方案介紹
         </Button>
       </div>
-      <div style={{
-        marginBottom: '20px',
-      }}>
-        <Button className="fluid" onClick={()=> alert('onClick')}>
+      <div
+        style={{
+          marginBottom: "20px"
+        }}
+      >
+        <Button className="fluid" onClick={() => alert("onClick")}>
           加入馬上看
         </Button>
       </div>
-      <div style={{
-        marginBottom: '20px',
-      }}>
-        <Button color="orange-solid" className="fluid" onClick={()=> alert('onClick')}>
+      <div
+        style={{
+          marginBottom: "20px"
+        }}
+      >
+        <Button
+          color="orange-solid"
+          className="fluid"
+          onClick={() => alert("onClick")}
+        >
           加入馬上看
         </Button>
       </div>

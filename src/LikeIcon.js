@@ -3,14 +3,6 @@ import React, { Component } from "react";
 import Tooltip from "rc-tooltip";
 
 class LikeIcon extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      fill: false
-    };
-  }
-
   render() {
     // eslint-disable-next-line jsx-a11y/anchor-has-content
     const { fill, overlay, onClick, placement } = this.props;

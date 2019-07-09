@@ -12,6 +12,7 @@ const paths = [
   "/",
   "/components/",
   "/components/button/",
+  "/components/buttongroup/",
   "/components/card/",
   "/components/exclusivelabel/",
   "/components/likeicon/",

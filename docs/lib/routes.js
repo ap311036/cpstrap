@@ -11,6 +11,7 @@ import VideoLabelPage from "./Components/VideoLabelPage";
 import ShareIconPage from "./Components/ShareIconPage";
 import MetaDataPage from "./Components/MetaDataPage";
 import ButtonPage from "./Components/ButtonPage";
+import ButtonGroupPage from "./Components/ButtonGroupPage";
 import ClearfixPage from './Utilities/ClearfixPage';
 import ColorsPage from './Utilities/ColorsPage';
 import NotFound from './NotFound';
@@ -24,6 +25,7 @@ const routes = (
     <Route path="/components/" component={Components}>
       <IndexRedirect to="button/" />
       <Route path="button/" component={ButtonPage} />
+      <Route path="buttongroup/" component={ButtonGroupPage} />
       <Route path="card/" component={CardPage} />
       <Route path="clamp/" component={ClampPage} />
       <Route path="exclusivelabel/" component={ExclusiveLabelPage} />
