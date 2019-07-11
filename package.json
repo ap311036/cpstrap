@@ -1,6 +1,6 @@
 {
   "name": "cpstrap",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "CatchPlay UI Library",
   "main": "lib/index.js",
   "sideEffects": false,
@@ -28,6 +28,15 @@
     "type": "git",
     "url": "git+ssh://git@github.com:ap311036/cpstrap.git"
   },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "lib",
+    "dist",
+    "src",
+    "es"
+  ],
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.2.0",
