@@ -39,7 +39,7 @@ export default class PlayIconPage extends React.Component {
 {`.play-icon-media {
   background: url('~/static/icons/play-off.svg');
 
-  .card:hover &,
+  .movie-card:hover &,
   &:hover {
     background: url('~/static/icons/play-on.svg');
   }

@@ -11,8 +11,8 @@ const items = [
     to: "/components/buttongroup/"
   },
   {
-    name: "Card",
-    to: "/components/card/"
+    name: "MovieCard",
+    to: "/components/moviecard/"
   },
   {
     name: "Clamp",

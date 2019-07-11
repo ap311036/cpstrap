@@ -3,7 +3,7 @@ export ExclusiveLabel from "./ExclusiveLabel";
 export LikeIcon from "./LikeIcon";
 export Row from './Row';
 export Col from "./Col";
-export Card from "./Card";
+export MovieCard from "./MovieCard";
 export Clamp from "./Clamp";
 export Slick from './Slick';
 export Navbar from './Navbar';

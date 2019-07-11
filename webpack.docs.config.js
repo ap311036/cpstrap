@@ -13,7 +13,7 @@ const paths = [
   "/components/",
   "/components/button/",
   "/components/buttongroup/",
-  "/components/card/",
+  "/components/moviecard/",
   "/components/exclusivelabel/",
   "/components/likeicon/",
   "/components/metadata/",
@@ -91,6 +91,8 @@ const config = {
     extensions: ['.js', '.json'],
     alias: {
       'bootstrap-css': path.join(__dirname, 'node_modules/bootstrap/dist/css/bootstrap.css'),
+      'slick-css': path.join(__dirname, 'node_modules/slick-carousel/slick/slick.css'),
+      'slick-theme-css': path.join(__dirname, 'node_modules/slick-carousel/slick/slick-theme.css'),
       'cpstrap-scss': path.resolve('./src/scss/index.scss'),
       cpstrap: path.resolve('./src'),
     }

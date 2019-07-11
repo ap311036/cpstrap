@@ -1,10 +1,10 @@
 import React from 'react';
-import { Card } from 'cpstrap';
+import { MovieCard } from "cpstrap";
 
 const Example = (props) => {
   return (
     <div>
-      <Card/>
+      <MovieCard />
     </div>
   );
 };

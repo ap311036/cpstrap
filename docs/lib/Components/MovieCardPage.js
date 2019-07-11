@@ -4,20 +4,20 @@ import { PrismCode } from 'react-prism';
 import PageTitle from '../UI/PageTitle';
 import SectionTitle from '../UI/SectionTitle';
 
-import Card from "../examples/Card";
-const CardSource = require("!!raw-loader!../examples/Card");
+import MovieCard from "../examples/MovieCard";
+const MovieCardSource = require("!!raw-loader!../examples/MovieCard");
 
-export default class ExclusiveLabelPage extends React.Component {
+export default class MovieCardPage extends React.Component {
   render() {
     return (
       <div>
-        <PageTitle title="Card" />
+        <PageTitle title="MovieCard" />
         <div className="docs-example">
-          <Card />
+          <MovieCard />
         </div>
         <pre>
           <PrismCode className="language-jsx">
-            {CardSource}
+            {MovieCardSource}
           </PrismCode>
         </pre>
 

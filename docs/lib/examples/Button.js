@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup } from 'cpstrap';
+import { Button } from 'cpstrap';
 
 const Example = (props) => {
   return (
