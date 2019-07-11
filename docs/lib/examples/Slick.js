@@ -1,5 +1,5 @@
-import React from 'react';
-import { Slick } from 'cpstrap';
+import React from "react";
+import { Slick } from "cpstrap";
 
 const settings = {
   draggable: false,
