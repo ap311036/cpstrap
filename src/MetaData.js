@@ -44,12 +44,17 @@ class MetaData extends Component {
 
     if (type === "imdb") {
       return url ? (
-        <a className="metadata-imdb" href={url} target="_blank">
-          <img src={`${staticRoot}imdb.png`} />
+        <a
+          className="metadata-imdb"
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={`${staticRoot}imdb.png`} alt="imdb" />
         </a>
       ) : (
         <span className="metadata-imdb">
-          <img src={`${staticRoot}imdb.png`} />
+          <img src={`${staticRoot}imdb.png`} alt="imdb" />
         </span>
       );
     }

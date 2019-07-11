@@ -1,5 +1,4 @@
 import React from "react";
-import { ExclusiveLabel } from "cpstrap";
 
 const MovieCard = ({src, type}) => {
   return (
