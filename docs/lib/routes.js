@@ -2,15 +2,17 @@ import React from 'react';
 import { Route, IndexRoute, IndexRedirect } from 'react-router';
 import Home from './Home';
 import ExclusiveLabelPage from "./Components/ExclusiveLabelPage";
+import EpisodeCardPage from "./Components/EpisodeCardPage";
 import LikeIconPage from "./Components/LikeIconPage";
 import PlayIconPage from "./Components/PlayIconPage";
-import MovieCardPage from "./Components/MovieCardPage";
+import CardPage from "./Components/CardPage";
 import ClampPage from "./Components/ClampPage";
 import SlickPage from "./Components/SlickPage";
 import VideoLabelPage from "./Components/VideoLabelPage";
 import ShareIconPage from "./Components/ShareIconPage";
 import MetaDataPage from "./Components/MetaDataPage";
 import ButtonPage from "./Components/ButtonPage";
+import LabelPage from "./Components/LabelPage";
 import ButtonGroupPage from "./Components/ButtonGroupPage";
 import ClearfixPage from './Utilities/ClearfixPage';
 import ColorsPage from './Utilities/ColorsPage';
@@ -26,9 +28,11 @@ const routes = (
       <IndexRedirect to="button/" />
       <Route path="button/" component={ButtonPage} />
       <Route path="buttongroup/" component={ButtonGroupPage} />
-      <Route path="moviecard/" component={MovieCardPage} />
+      <Route path="card/" component={CardPage} />
       <Route path="clamp/" component={ClampPage} />
       <Route path="exclusivelabel/" component={ExclusiveLabelPage} />
+      <Route path="EpisodeCard/" component={EpisodeCardPage} />
+      <Route path="label/" component={LabelPage} />
       <Route path="likeicon/" component={LikeIconPage} />
       <Route path="metadata/" component={MetaDataPage} />
       <Route path="slick/" component={SlickPage} />

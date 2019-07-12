@@ -1,6 +1,11 @@
 import React from "react";
-
-const Card = ({ onClick, type }) => {
+import PropTypes from "prop-types";
+import PlayIcon from "./PlayIcon";
+import Label from "./Label";
+const propTypes = {
+  children: PropTypes.node
+};
+const Card = ({ src, title, children, playicon, labelText }) => {
   return (
     <div className="movie-card">
       <div className="movie-card-inner">
@@ -10,15 +15,15 @@ const Card = ({ onClick, type }) => {
           alt="placeholder"
         />
         <div className="movie-card-image-placeholder" />
-        <img
-          className="movie-card-image"
-          src="https://dkfhw9rzsr80z.cloudfront.net/PTS-TW-D0001-01-0001/artworks/posters/PTS-TW-D0001-01-0001-E272.jpg"
-          alt="poster"
-        />
+        <img className="movie-card-image" src={src} alt="poster" />
+        {playicon && <PlayIcon />}
       </div>
-      <div className="movie-card-content">1.第一集</div>
-      <div className="movie-card-zoom" style={{ display: "none" }}>
-        zoom
+      <div className="movie-card-content">
+        <div className="movie-card-content-title">{title}</div>
+        {labelText && <Label text={labelText} />}
+      </div>
+      <div className="movie-card-zoom">
+        {children && children}
       </div>
     </div>
   );
@@ -27,5 +32,7 @@ const Card = ({ onClick, type }) => {
 Card.defaultProps = {
   onClick: () => {}
 };
+
+Card.propTypes = propTypes;
 
 export default Card;

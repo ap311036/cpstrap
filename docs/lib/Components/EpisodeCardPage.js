@@ -4,27 +4,27 @@ import { PrismCode } from 'react-prism';
 import PageTitle from '../UI/PageTitle';
 import SectionTitle from '../UI/SectionTitle';
 
-import MovieCard from "../examples/MovieCard";
-const MovieCardSource = require("!!raw-loader!../examples/MovieCard");
+import EpisodeCardExample from "../examples/EpisodeCard";
+const EpisodeCardExampleSource = require("!!raw-loader!../examples/EpisodeCard");
 
-export default class MovieCardPage extends React.Component {
+export default class EpisodeCardPage extends React.Component {
   render() {
     return (
       <div>
-        <PageTitle title="MovieCard" />
+        <PageTitle title="EpisodeCard" />
         <div className="docs-example">
-          <MovieCard />
+          <EpisodeCardExample />
         </div>
         <pre>
           <PrismCode className="language-jsx">
-            {MovieCardSource}
+            {EpisodeCardExampleSource}
           </PrismCode>
         </pre>
 
         <SectionTitle>Properties</SectionTitle>
         <pre>
           <PrismCode className="language-jsx">
-{`ExclusiveLabel.propTypes = {
+{`EpisodeCard.propTypes = {
   staticRoot: PropTypes.string, // default: ''
   type: PropTypes.string, // default: 'img' [img|text]
   lng: PropTypes.string // default: 'zh-tw' [zh-tw|en-us|id-id]

@@ -11,8 +11,8 @@ const items = [
     to: "/components/buttongroup/"
   },
   {
-    name: "MovieCard",
-    to: "/components/moviecard/"
+    name: "Card",
+    to: "/components/card/"
   },
   {
     name: "Clamp",
@@ -21,6 +21,14 @@ const items = [
   {
     name: "ExclusiveLabel",
     to: "/components/exclusivelabel/"
+  },
+  {
+    name: "EpisodeCard",
+    to: "/components/episodecard/"
+  },
+  {
+    name: "Label",
+    to: "/components/Label/"
   },
   {
     name: "LikeIcon",
