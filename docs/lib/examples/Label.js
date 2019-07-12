@@ -1,10 +1,10 @@
 import React from 'react';
-import { MovieCard } from "cpstrap";
+import { Label } from 'cpstrap';
 
 const Example = (props) => {
   return (
     <div>
-      <MovieCard />
+      <Label text='免費' />
     </div>
   );
 };
