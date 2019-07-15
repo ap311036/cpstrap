@@ -1,5 +1,5 @@
 import React from "react";
-import { Slick } from "cpstrap";
+import { Slick, Card } from "cpstrap";
 
 const settings = {
   draggable: false,
@@ -67,7 +67,19 @@ const Example = () => {
     <div>
       <Slick settings={settings} title="集數">
         {data.map((item, index) => {
-          return <img src={item} key={index} alt="poster" />;
+          return (
+            <Card
+              src={item}
+              title={`第 ${index + 1} 集`}
+              playicon={true}
+              key={index}
+              labelText={index <= 3 && "免費"}
+            >
+              {index === 4 && (
+                <img src={item} alt="poster" />
+              )}
+            </Card>
+          );
         })}
       </Slick>
     </div>

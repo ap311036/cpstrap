@@ -29,12 +29,12 @@ icon height = card.height 42%
   display: block;
   width: 60px;
   height: 60px;
-  background: url('/assets/icons/play-off.svg');
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMjkiIGZpbGw9IiMwMDAiIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuNSIvPgogICAgICAgIDxwYXRoIGZpbGw9IiNDQkNCQ0IiIGQ9Ik00MyAzMC41TDIzIDQzVjE4eiIvPgogICAgPC9nPgo8L3N2Zz4K);
   background-size: 100% 100%;
 
   .card:hover &,
   &:hover {
-    background: url('/assets/icons/play-on.svg');
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMjkiIGZpbGw9IiMwMDAiIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuNSIvPgogICAgICAgIDxwYXRoIGZpbGw9IiNGMjZGMjEiIGQ9Ik00MyAzMC41TDIzIDQzVjE4eiIvPgogICAgPC9nPgo8L3N2Zz4K);
     background-size: 100% 100%;
   }
 
@@ -47,7 +47,7 @@ icon height = card.height 42%
   &:before {
     content: '';
     display: none;
-    background: url('/assets/icons/play-on.svg');
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMjkiIGZpbGw9IiMwMDAiIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIuNSIvPgogICAgICAgIDxwYXRoIGZpbGw9IiNGMjZGMjEiIGQ9Ik00MyAzMC41TDIzIDQzVjE4eiIvPgogICAgPC9nPgo8L3N2Zz4K);
   }
 }
 
