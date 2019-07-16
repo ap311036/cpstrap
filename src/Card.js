@@ -2,57 +2,102 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import PlayIcon from "./PlayIcon";
-import ImagePlaceHolder from "./ImagePlaceHolder";
 import Label from "./Label";
-import LikeIcon from "./LikeIcon";
-
+import ImagePlaceHolder from "./ImagePlaceHolder";
 const propTypes = {
   children: PropTypes.node
 };
 class Card extends React.Component {
-	constructor(props) {
-		super(props);
-		this.goItempage = this.goItempage.bind(this)
-		this.onMouseEnter = this.onMouseEnter.bind(this)
-		this.onMouseLeave = this.onMouseLeave.bind(this)
-		this.state = {
-			hover: false,
-			zoom: false,
-		};
-		this.hoverTimeOut = null
+  constructor(props) {
+    super(props);
+    this.state = {
+      hover: false,
+      zoom: false
+    };
+    this._onMouseEnterHandler = this._onMouseEnterHandler.bind(this);
+    this._onMouseLeaveHandler = this._onMouseLeaveHandler.bind(this);
+    this.goItempage = this.goItempage.bind(this);
+    this.hoverTimeOut = null;
   }
+  _onMouseEnterHandler() {
+    const { hover } = this.state;
 
-	activeZoom() {
-		// do something for hover/hover sibling item if you want.
-		const { poster, onEnter, zoomEffect } = this.props;
+    // cleanup all zoom effect
+    clearTimeout(this.hoverTimeOut);
 
-		if (!this.zoom || typeof window === "undefined" ) {
-			return;
-		}
+    // set hover active, and detect position then addClass
+    // 如果state.hover已經是true就不要再setState跟呼叫callback了
+    if (!hover) {
+      this.setState(
+        {
+          hover: true
+        },
+        this.activeZoom
+      );
+    }
+  }
+  _onMouseLeaveHandler() {
+    // const { onLeave, viewport, isDesktop, hasQuickView } = this.props;
 
-		const wrapperEl = this.poster
-		const zoomEl = this.zoom;
-		const elRect = wrapperEl.getBoundingClientRect();
+    // if (viewport.width < 960 || !isDesktop || !hasQuickView) return;
+
+    clearTimeout(this.hoverTimeOut);
+
+    // $(zoomEl).parents('.slick-track').find('.slick-slide').css('transform', 'translate3d(0,0,0)')
+
+    this.setState({
+      zoom: false
+    });
+
+    setTimeout(() => {
+      if (this.poster) {
+        this.setState(
+          {
+            hover: false
+          },
+          this.inactiveZoom
+        );
+      }
+    }, 0);
+  }
+  inactiveZoom() {
+    const zoomEl = this.zoom;
+    setTimeout(() => {
+      zoomEl.classList.remove("left", "right", "center", "bottom");
+    }, 400);
+  }
+  activeZoom() {
+    // do something for hover/hover sibling item if you want.
+    const { poster, onEnter, zoomEffect } = this.props;
+
+    if (!this.zoom || typeof window === "undefined") {
+      return;
+    }
+
+    const wrapperEl = this.poster;
+    const zoomEl = this.zoom;
+    const elRect = wrapperEl.getBoundingClientRect();
     let hasPositionChanged = false;
+    let target = wrapperEl.parentNode.parentNode.parentNode;
+    console.log(target.offsetWidth);
+    if (
+      elRect.left < 0 ||
+      elRect.left + target.innerWidth * 0.04 > target.offsetWidth
+    ) {
+      return;
+    }
 
-		if (
-			elRect.left < 0 ||
-			elRect.left + window.innerWidth * 0.04 > window.innerWidth
-		) {
-			return;
-		}
-
-    if (elRect.right + elRect.width > window.innerWidth) {
+    if (elRect.right + elRect.width > target.offsetWidth) {
       hasPositionChanged = true;
-			zoomEl.classList.add("right");
-		}
+      zoomEl.classList.add("right");
+    }
 
     if (elRect.left < 120) {
       hasPositionChanged = true;
-			zoomEl.classList.add("left");
-		} 
-    
-    if (elRect.top < 250 && zoomEffect === 'zoom') {
+      zoomEl.classList.add("left");
+    }
+
+    if (elRect.top < 250 && zoomEffect === "zoom") {
       hasPositionChanged = true;
       zoomEl.classList.add("top");
     }
@@ -60,213 +105,66 @@ class Card extends React.Component {
     if (!hasPositionChanged) {
       zoomEl.classList.add("center");
     }
-
-		this.hoverTimeOut = setTimeout(() => {
-			if (wrapperEl) {
-				this.setState({ zoom: true }, () => this.onZoomOut());
-			}
-			onEnter()
-		}, 400)
-
+    this.hoverTimeOut = setTimeout(() => {
+      if (wrapperEl) {
+        this.setState({ zoom: true }, () => this.onZoomOut());
+      }
+    }, 400);
   }
-  
   onZoomOut() {
-    if(!this.state.zoom) return;
     console.log("onZoomOut");
   }
-
-	inactiveZoom(){
-		const zoomEl = this.zoom;
-		setTimeout(() => {
-			zoomEl.classList.remove("left", "right", "center", "bottom");
-		}, 400);
-	};
-
-	onMouseEnter() {
-		const { hover } = this.state
-    const { viewport, isDesktop, hasQuickView } = this.props;
-
-		// if (viewport.width < 960 || !isDesktop || !hasQuickView ) return
-
-		// cleanup all zoom effect
-		clearTimeout(this.hoverTimeOut);
-
-    // set hover active, and detect position then addClass
-    // 如果state.hover已經是true就不要再setState跟呼叫callback了
-    if(!hover) {
-      this.setState({
-        hover: true
-      }, this.activeZoom)
-    }
-	}
-
-	onMouseLeave() {
-		const { onLeave, viewport, isDesktop, hasQuickView } = this.props;
-
-		// if (viewport.width < 960 || !isDesktop || !hasQuickView ) return
-
-		clearTimeout(this.hoverTimeOut);
-
-		onLeave()
-
-		// $(zoomEl).parents('.slick-track').find('.slick-slide').css('transform', 'translate3d(0,0,0)')
-
-		this.setState({
-			zoom: false,
-		});
-
-		setTimeout(() => {
-			if (this.poster) {
-				this.setState({
-					hover: false,
-				}, this.inactiveZoom);
-			}
-		}, 400)
-	}
-
-	goItempage() {
-    console.log('goItempage');
-	}
-
-	onOpenPlayer(videoType = 'movie') {
-    console.log('onOpenPlayer');
-	}
-
-	render() {
-			const { isOffTheShelt, hover, zoom} = this.state
-			const { title, playicon, labelText, src } = this.props;
-
-			const wrapperClass = classNames(
-        'movie-card', 
-        { 'zoom': zoom },
-        { 'off-the-shelt': isOffTheShelt }
-      );
-
-			const precover =
-			"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARAAAACZAQMAAAGqC8dkAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABxJREFUWMPtwTEBAAAAwqD1T20MH6AAAAAAAPgbFa4AARwCsQoAAAAASUVORK5CYII=";
-
-      const cardContentClass = classNames('movie-card-content',
-        { 'movie-card-content-small': true }
-      );
-
-      const cardContentTitleClass = classNames('movie-card-content-title'
-      );
-
-			const zoomClass = classNames('movie-card-zoom',
-				{'hover': hover}
-      );
-      
-      const cardContentActionClass = classNames('movie-card-contain-action'
-      );
-      
-			return (
-        <div
-          onMouseOver={this.onMouseEnter}
-          onMouseLeave={this.onMouseLeave}
-          className={wrapperClass}
-          ref={ref => (this.poster = ref)}
-        >
-          {/* first view object */}
+  goItempage() {
+    console.log("goItempage");
+  }
+  render() {
+    const { src, title, labelText, children, playicon } = this.props;
+    const { zoom, hover } = this.state;
+    const wrapperClass = classNames("movie-card", { zoom: zoom });
+    const zoomClass = classNames("movie-card-zoom", { hover: hover });
+    return (
+      <div
+        onMouseOver={this._onMouseEnterHandler}
+        onMouseLeave={this._onMouseLeaveHandler}
+        className={wrapperClass}
+        ref={ref => (this.poster = ref)}
+      >
+        <div className="movie-card-inner">
           <div
-            className="movie-card-inner"
-            style={{
-              opacity: zoom ? 0 : 1
-            }}
+            onClick={this.goItempage}
+            ref={ref => (this.coverWrapper = ref)}
+            className="card-image-wrapper"
           >
-            <div
-              onClick={this.goItempage}
-              ref={ref => (this.coverWrapper = ref)}
-              className="movie-card-image-wrapper"
-            >
-              <img
-                className="movie-card-image-placeholader"
-                src={precover}
-                alt="ImagePlaceHolder"
-              />
-              <ImagePlaceHolder />
-              <img
-                alt="poster"
-                ref={ref => (this.cover = ref)}
-                className="movie-card-image"
-                src={src}
-                onLoad={() => {
-                  if (this.cover) {
-                    this.cover.style.opacity = 1;
-                  }
-                }}
-              />
-              {playicon && <PlayIcon />}
-            </div>
-
-            <div className={cardContentClass} onClick={this.goItempage}>
-              <div className={cardContentTitleClass}>{title}</div>
-              <div className={classNames("tags-wrapper")}>
-                <Label text={labelText} />
-              </div>
-            </div>
-
-            {<div className="movie-card-shadow-layer" />}
+            <img
+              className="movie-card-placeholder"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARAAAACZAQMAAAGqC8dkAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAABxJREFUWMPtwTEBAAAAwqD1T20MH6AAAAAAAPgbFa4AARwCsQoAAAAASUVORK5CYII="
+              alt="placeholder"
+            />
+            <ImagePlaceHolder />
+            <img className="movie-card-image" src={src} alt="poster" />
+            {playicon && <PlayIcon />}
           </div>
-
-          {/* zoom object */}
-          
-            <div className={zoomClass} ref={ref => (this.zoom = ref)}>
-              {
-                <div
-                  className="movie-card-with-video"
-                  style={{ background: "#3a3a3a" }}
-                >
-                  <div
-                    onClick={this.goItempage}
-                    className="movie-card-image-wrapper"
-                  >
-                    <img
-                      alt="placeHolder"
-                      className="movie-card-image-placeholader"
-                      src={precover}
-                    />
-                    <ImagePlaceHolder />
-                    <img
-                      alt="poster"
-                      ref={ref => (this.zoomCover = ref)}
-                      className="movie-card-image"
-                      src={src}
-                      onLoad={() => {
-                        if (this.cover) {
-                          this.zoomCover.style.opacity = 1;
-                        }
-                      }}
-                    />
-                  </div>
-
-                  <div className="movie-card-content movie-card-content-slide">
-                    <div className="movie-card-contain-top">
-                      <div
-                        onClick={this.goItempage}
-                        className="movie-card-contain-head"
-                      >
-                        {title}
-                      </div>
-                      <div className={cardContentActionClass}>
-                        <LikeIcon />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              }
-            </div>
-          
+          <div className="movie-card-content">
+            <div className="movie-card-content-title">{title}</div>
+            {labelText && <Label text={labelText} />}
+          </div>
         </div>
-      );
-	}
+        {
+          <div className={zoomClass} ref={ref => (this.zoom = ref)}>
+            {children && children}
+          </div>
+        }
+      </div>
+    );
+  }
 }
 
 Card.defaultProps = {
-	hasQuickView: true,
-  isIgnoreOffTheShelt: false,
-	zoomEffect: 'slide', // slide
-	onEnter: () => {},
-	onLeave: () => {}
-}
+  onClick: () => {},
+  playicon: false,
+  children: <div />
+};
+
+Card.propTypes = propTypes;
 
 export default Card;
