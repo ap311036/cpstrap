@@ -3,9 +3,9 @@ import Slider from "react-slick";
 
 class Slick extends React.Component {
   render(){
-    const { title, children, settings} = this.props;
+    const { title, children, settings, className} = this.props;
     return (
-      <div style={{ padding: "0 4vw 30px 4vw", overflow: "hidden" }}>
+      <div className={className}>
         <span className="slick-title">{title}</span>
         <Slider {...settings}>{children}</Slider>
       </div>
