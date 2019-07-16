@@ -78,16 +78,16 @@ class Card extends React.Component {
     const zoomEl = this.zoom;
     const elRect = wrapperEl.getBoundingClientRect();
     let hasPositionChanged = false;
-    let target = wrapperEl.parentNode.parentNode.parentNode;
-    console.log(target.offsetWidth);
+    // let target = wrapperEl.parentNode.parentNode.parentNode;
+    // console.log(target.offsetWidth);
     if (
       elRect.left < 0 ||
-      elRect.left + target.innerWidth * 0.04 > target.offsetWidth
+      elRect.left + window.innerWidth * 0.04 > window.innerWidth
     ) {
       return;
     }
 
-    if (elRect.right + elRect.width > target.offsetWidth) {
+    if (elRect.right + elRect.width > window.innerWidth) {
       hasPositionChanged = true;
       zoomEl.classList.add("right");
     }

@@ -24,6 +24,14 @@ $slick-opacity-not-active: 0.25 !default;
   -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+
+    .slick-prev:before,
+    .slick-next:before {
+      opacity: 1;
+    }
+  }
 }
 
 .slick-list {
