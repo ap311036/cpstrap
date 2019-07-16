@@ -75,9 +75,7 @@ const Example = () => {
               key={index}
               labelText={index <= 3 && "免費"}
             >
-              {index === 4 && (
-                <img src={item} alt="poster" />
-              )}
+              <img src={item} alt="poster" />
             </Card>
           );
         })}

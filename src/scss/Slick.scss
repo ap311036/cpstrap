@@ -78,6 +78,9 @@ $slick-opacity-not-active: 0.25 !default;
   float: left;
   height: 100%;
   min-height: 1px;
+  transition: all 400ms cubic-bezier(0.5, 0, 0.1, 1);
+  transform: translate3d(0, 0, 0);
+  padding: 0 calc(3px + .1vw);
 
   [dir="rtl"] & {
     float: right;
