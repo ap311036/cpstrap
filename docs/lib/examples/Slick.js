@@ -1,53 +1,6 @@
 import React from "react";
 import { Slick, Card } from "cpstrap";
 
-const settings = {
-  draggable: false,
-  infinite: false,
-  centerMode: false,
-  variableWidth: false,
-  mobileFirst: true,
-  slidesToShow: 2,
-  slidesToScroll: 2,
-  responsive: [
-    {
-      breakpoint: 2000,
-      settings: {
-        slidesToShow: 6,
-        slidesToScroll: 6
-      }
-    },
-    {
-      breakpoint: 1400,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 5
-      }
-    },
-    {
-      breakpoint: 1000,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    }
-  ]
-};
-
 const data = [
   "https://dkfhw9rzsr80z.cloudfront.net/PTS-TW-D0001-01-0001/artworks/posters/PTS-TW-D0001-01-0001-E272.jpg",
   "https://dkfhw9rzsr80z.cloudfront.net/PTS-TW-D0001-01-0002/artworks/posters/PTS-TW-D0001-01-0002-E272.jpg",
@@ -64,8 +17,13 @@ const data = [
 
 const Example = () => {
   return (
-    <div>
-      <Slick settings={settings} title="集數">
+    <div
+      style={{
+        padding: "0 4vw 30px 4vw",
+        overflow: 'hidden'
+      }}
+    >
+      <Slick title="集數">
         {data.map((item, index) => {
           return (
             <Card

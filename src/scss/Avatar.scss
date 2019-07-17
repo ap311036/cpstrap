@@ -1,0 +1,60 @@
+.avatar {
+  .cover {
+    border-radius: 50%;
+    position: relative;
+    transition: all .65s ease;
+    width: 80%;
+    margin: auto auto 10px;
+    transform: translate3d(0, 0, 0);
+    overflow: hidden;
+
+    &:hover {
+      filter: grayscale(80%);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    img:nth-child(2) {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+    }
+
+    .label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3px 0 7px;
+      z-index: 3;
+      background: rgba(0, 0, 0, 0.6);
+      font-size: 12px;
+
+      @media screen and (min-width: 1600px) {
+        font-size: calc(12px + .2vw);
+        padding: calc(3px + .2vh) 0 calc(7px + .2vh);
+      }
+    }
+  }
+
+  .name {
+    color: #efefef;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+
+    @media screen and (min-width: 1600px) {
+      font-size: calc(14px + .2vw);
+    }
+  }
+}

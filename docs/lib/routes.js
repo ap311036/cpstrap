@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, IndexRoute, IndexRedirect } from 'react-router';
 import Home from './Home';
+import AvatarPage from "./Components/AvatarPage";
 import ExclusiveLabelPage from "./Components/ExclusiveLabelPage";
 import EpisodeCardPage from "./Components/EpisodeCardPage";
 import LikeIconPage from "./Components/LikeIconPage";
@@ -25,7 +26,8 @@ const routes = (
   <Route path="/" component={UI.Layout}>
     <IndexRoute component={Home} />
     <Route path="/components/" component={Components}>
-      <IndexRedirect to="button/" />
+      <IndexRedirect to="avatar/" />
+      <Route path="avatar/" component={AvatarPage} />
       <Route path="button/" component={ButtonPage} />
       <Route path="buttongroup/" component={ButtonGroupPage} />
       <Route path="card/" component={CardPage} />

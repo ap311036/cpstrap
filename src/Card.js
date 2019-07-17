@@ -22,11 +22,8 @@ class Card extends React.Component {
   _onMouseEnterHandler() {
     const { hover } = this.state;
 
-    // cleanup all zoom effect
     clearTimeout(this.hoverTimeOut);
 
-    // set hover active, and detect position then addClass
-    // 如果state.hover已經是true就不要再setState跟呼叫callback了
     if (!hover) {
       this.setState(
         {
@@ -37,13 +34,8 @@ class Card extends React.Component {
     }
   }
   _onMouseLeaveHandler() {
-    // const { onLeave, viewport, isDesktop, hasQuickView } = this.props;
-
-    // if (viewport.width < 960 || !isDesktop || !hasQuickView) return;
 
     clearTimeout(this.hoverTimeOut);
-
-    // $(zoomEl).parents('.slick-track').find('.slick-slide').css('transform', 'translate3d(0,0,0)')
 
     this.setState({
       zoom: false
@@ -68,7 +60,7 @@ class Card extends React.Component {
   }
   activeZoom() {
     // do something for hover/hover sibling item if you want.
-    const { poster, onEnter, zoomEffect } = this.props;
+    const { zoomEffect } = this.props;
 
     if (!this.zoom || typeof window === "undefined") {
       return;

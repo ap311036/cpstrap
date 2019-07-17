@@ -1,12 +1,18 @@
 import React from "react";
+import classNames from "classnames";
 import Slider from "react-slick";
 
 class Slick extends React.Component {
   render(){
     const { title, children, settings, className} = this.props;
+    const classes = classNames(className)
     return (
-      <div className={className}>
-        <span className="slick-title">{title}</span>
+      <div className={classes}>
+        {title && (
+          <div className="slick-section-header">
+            <span className="slick-title">{title}</span>
+          </div>
+        )}
         <Slider {...settings}>{children}</Slider>
       </div>
     );
@@ -25,29 +31,29 @@ const settings = {
     {
       breakpoint: 2000,
       settings: {
-        slidesToShow: 6,
-        slidesToScroll: 6
-      }
-    },
-    {
-      breakpoint: 1400,
-      settings: {
         slidesToShow: 5,
         slidesToScroll: 5
       }
     },
     {
-      breakpoint: 1000,
+      breakpoint: 1400,
       settings: {
         slidesToShow: 4,
         slidesToScroll: 4
       }
     },
     {
-      breakpoint: 767,
+      breakpoint: 1000,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
       }
     },
     {

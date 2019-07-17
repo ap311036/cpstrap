@@ -3,6 +3,10 @@ import Content from "../UI/Content";
 
 const items = [
   {
+    name: "Avatar",
+    to: "/components/avatar/"
+  },
+  {
     name: "Button",
     to: "/components/button/"
   },
