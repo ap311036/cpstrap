@@ -1,3 +1,4 @@
+export Avatar from "./Avatar";
 export Container from './Container';
 export ExclusiveLabel from "./ExclusiveLabel";
 export EpisodeCard from "./EpisodeCard";

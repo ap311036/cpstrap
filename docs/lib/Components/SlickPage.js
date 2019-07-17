@@ -5,7 +5,9 @@ import PageTitle from '../UI/PageTitle';
 import SectionTitle from '../UI/SectionTitle';
 
 import Slick from "../examples/Slick";
+import SlickAvatar from "../examples/SlickAvatar";
 const SlickSource = require("!!raw-loader!../examples/Slick");
+const SlickAvatarSource = require("!!raw-loader!../examples/SlickAvatar");
 
 export default class SlickPage extends React.Component {
   render() {
@@ -18,6 +20,16 @@ export default class SlickPage extends React.Component {
         <pre>
           <PrismCode className="language-jsx">
             {SlickSource}
+          </PrismCode>
+        </pre>
+
+        <PageTitle title="SlickAvatar" />
+        <div className="docs-example">
+          <SlickAvatar />
+        </div>
+        <pre>
+          <PrismCode className="language-jsx">
+            {SlickAvatarSource}
           </PrismCode>
         </pre>
 

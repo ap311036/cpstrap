@@ -31,6 +31,12 @@ $slick-opacity-not-active: 0.25 !default;
     .slick-next:before {
       opacity: 1;
     }
+
+  }
+
+  .slick-prev.slick-disabled:before,
+  .slick-next.slick-disabled:before {
+    opacity: 0;
   }
 }
 
@@ -297,8 +303,16 @@ $slick-opacity-not-active: 0.25 !default;
 
 }
 
-.slick-title {
-  font-size: calc(20px + .2vw);
-  color: #f26f21;
-  font-weight: bolder;
+.slick-section-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: calc(5px + .2vw);
+  align-items: baseline;
+  min-height: 33px;
+
+  .slick-title {
+    font-size: calc(20px + .2vw);
+    color: #f26f21;
+    font-weight: bolder;
+  }
 }
