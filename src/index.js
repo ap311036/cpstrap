@@ -24,4 +24,5 @@ export VideoLabel from "./VideoLabel";
 export ShareIcon from "./ShareIcon";
 export CPClipboard from "./CPClipboard";
 export MetaData from './MetaData';
+export ImagePlaceHolder from "./ImagePlaceHolder";
 export * as Util from './utils';
