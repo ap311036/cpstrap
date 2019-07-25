@@ -25,6 +25,7 @@ class Card extends React.Component {
     clearTimeout(this.hoverTimeOut);
 
     if (!hover) {
+      console.log("onEnter");
       this.setState(
         {
           hover: true
@@ -43,6 +44,7 @@ class Card extends React.Component {
 
     setTimeout(() => {
       if (this.poster) {
+        console.log("onLeave");
         this.setState(
           {
             hover: false
@@ -50,7 +52,7 @@ class Card extends React.Component {
           this.inactiveZoom
         );
       }
-    }, 0);
+    }, 400);
   }
   inactiveZoom() {
     const zoomEl = this.zoom;
@@ -97,6 +99,7 @@ class Card extends React.Component {
     if (!hasPositionChanged) {
       zoomEl.classList.add("center");
     }
+
     this.hoverTimeOut = setTimeout(() => {
       if (wrapperEl) {
         this.setState({ zoom: true }, () => this.onZoomOut());
