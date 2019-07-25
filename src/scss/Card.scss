@@ -5,6 +5,19 @@
 
   &.zoom {
     z-index: 2;
+
+      .movie-card-zoom {
+
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+        pointer-events: auto;
+
+        // first children shadow
+        >* {
+          background-color: #0e0e0e;
+          box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, .37)
+        }
+      }
   }
 
   .movie-card-inner {
@@ -112,17 +125,17 @@
       left: -50%;
     }
 
-    &.hover {
-      opacity: 1;
-      transform: translate3d(0, 0, 0) scale(1);
-      pointer-events: auto;
+    // .movie-card.zoom & {
+    //   opacity: 1;
+    //   transform: translate3d(0, 0, 0) scale(1);
+    //   pointer-events: auto;
 
-      // first children shadow
-      >* {
-        background-color: #0e0e0e;
-        box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, .37)
-      }
-    }
+    //   // first children shadow
+    //   >* {
+    //     background-color: #0e0e0e;
+    //     box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, .37)
+    //   }
+    // }
 
     &.left {
       left: 0
