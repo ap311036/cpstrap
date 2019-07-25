@@ -62,7 +62,7 @@ class Card extends React.Component {
   }
   activeZoom() {
     // do something for hover/hover sibling item if you want.
-    const { zoomEffect } = this.props;
+    const { zoomEffect, onEnter, videoId } = this.props;
 
     if (!this.zoom || typeof window === "undefined") {
       return;
@@ -104,6 +104,7 @@ class Card extends React.Component {
       if (wrapperEl) {
         this.setState({ zoom: true }, () => this.onZoomOut());
       }
+      onEnter(videoId);
     }, 400);
   }
   onZoomOut() {
@@ -156,6 +157,7 @@ class Card extends React.Component {
 
 Card.defaultProps = {
   onClick: () => {},
+  onEnter: () => {},
   playicon: false,
   children: <div />
 };
