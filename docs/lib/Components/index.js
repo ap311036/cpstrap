@@ -35,8 +35,8 @@ const items = [
     to: "/components/Label/"
   },
   {
-    name: "LikeIcon",
-    to: "/components/likeicon/"
+    name: "Icon",
+    to: "/components/icon/"
   },
   {
     name: "PlayIcon",
