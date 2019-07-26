@@ -6,24 +6,32 @@ class Example extends React.Component {
     super(props);
 
     this.state = {
-      fill: false
+      like1: false,
+      like2: false
     };
     this.onClickHandler = this.onClickHandler.bind(this);
   }
-  onClickHandler() {
-    const { fill } = this.state;
-    this.setState({ fill: !fill });
+  onClickHandler(name) {
+    this.setState({ [name]: !this.state[name] });
   }
   render() {
-    const { fill } = this.state;
+    const { like1, like2 } = this.state;
     return (
-      <div>
-        <LikeIcon
-          placement="bottomRight"
-          overlay={"your string"}
-          fill={fill}
-          onClick={() => this.onClickHandler}
-        />
+      <div className="row">
+        <div className="col-md-6">
+          <LikeIcon
+            placement="bottomRight"
+            overlay={"your string"}
+            fill={like1}
+            onClick={() => this.onClickHandler("like1")}
+          />
+        </div>
+        <div className="col-md-6">
+          <LikeIcon
+            fill={like2}
+            onClick={() => this.onClickHandler("like2")}
+          />
+        </div>
       </div>
     );
   }
