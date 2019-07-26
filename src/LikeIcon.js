@@ -1,14 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
 import Tooltip from "rc-tooltip";
+import classNames from "classnames";
 
 class LikeIcon extends Component {
   render() {
     // eslint-disable-next-line jsx-a11y/anchor-has-content
-    const { fill, overlay, onClick, placement } = this.props;
+    const { fill, overlay, onClick, placement, className } = this.props;
     const Tag = (overlay && placement) ? Tooltip : "div";
+    const classes = classNames(className);
     return (
-      <Tag placement={placement} overlay={overlay}>
+      <Tag className={classes} placement={placement} overlay={overlay}>
         {fill ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
