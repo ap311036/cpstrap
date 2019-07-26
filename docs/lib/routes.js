@@ -4,7 +4,7 @@ import Home from './Home';
 import AvatarPage from "./Components/AvatarPage";
 import ExclusiveLabelPage from "./Components/ExclusiveLabelPage";
 import EpisodeCardPage from "./Components/EpisodeCardPage";
-import LikeIconPage from "./Components/LikeIconPage";
+import IconPage from "./Components/IconPage";
 import PlayIconPage from "./Components/PlayIconPage";
 import CardPage from "./Components/CardPage";
 import ClampPage from "./Components/ClampPage";
@@ -35,7 +35,7 @@ const routes = (
       <Route path="exclusivelabel/" component={ExclusiveLabelPage} />
       <Route path="EpisodeCard/" component={EpisodeCardPage} />
       <Route path="label/" component={LabelPage} />
-      <Route path="likeicon/" component={LikeIconPage} />
+      <Route path="icon/" component={IconPage} />
       <Route path="metadata/" component={MetaDataPage} />
       <Route path="slick/" component={SlickPage} />
       <Route path="shareicon/" component={ShareIconPage} />

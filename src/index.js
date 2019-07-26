@@ -22,6 +22,7 @@ export Collapse from "./Collapse";
 export PlayIcon from "./PlayIcon";
 export VideoLabel from "./VideoLabel";
 export ShareIcon from "./ShareIcon";
+export SoundIcon from "./SoundIcon";
 export CPClipboard from "./CPClipboard";
 export MetaData from './MetaData';
 export ImagePlaceHolder from "./ImagePlaceHolder";

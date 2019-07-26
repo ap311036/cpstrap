@@ -18,7 +18,7 @@ const paths = [
   "/components/exclusivelabel/",
   "/components/episodecard/",
   "/components/label/",
-  "/components/likeicon/",
+  "/components/icon/",
   "/components/metadata/",
   "/components/playicon/",
   "/components/shareicon/",
