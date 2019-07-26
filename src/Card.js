@@ -147,7 +147,7 @@ class Card extends React.Component {
         </div>
         {
           <div className={zoomClass} ref={ref => (this.zoom = ref)}>
-            {children && children}
+            {hover && children && children}
           </div>
         }
       </div>
