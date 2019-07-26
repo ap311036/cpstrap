@@ -6,15 +6,16 @@ class LikeIcon extends Component {
   render() {
     // eslint-disable-next-line jsx-a11y/anchor-has-content
     const { fill, overlay, onClick, placement } = this.props;
+    const Tag = (overlay && placement) ? Tooltip : "div";
     return (
-      <Tooltip placement={placement} overlay={overlay}>
+      <Tag placement={placement} overlay={overlay}>
         {fill ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="36"
             height="36"
             viewBox="0 0 36 36"
-            onClick={onClick()}
+            onClick={() => onClick()}
           >
             <g fill="none" fillRule="evenodd">
               <circle cx="18" cy="18" r="18" opacity=".15" />
@@ -30,7 +31,7 @@ class LikeIcon extends Component {
             width="36"
             height="36"
             viewBox="0 0 36 36"
-            onClick={onClick()}
+            onClick={() => onClick()}
           >
             <g fill="none" fillRule="evenodd">
               <circle cx="18" cy="18" r="18" opacity=".15" />
@@ -42,7 +43,7 @@ class LikeIcon extends Component {
             </g>
           </svg>
         )}
-      </Tooltip>
+      </Tag>
     );
   }
 }
@@ -50,8 +51,8 @@ class LikeIcon extends Component {
 LikeIcon.defaultProps = {
   onClick: () => {},
   fill: false,
-  overlay: "Tooltip",
-  placement: "bottomRight"
+  overlay: "",
+  placement: ""
 };
 
 export default LikeIcon;
