@@ -9,8 +9,8 @@ class Slick extends React.Component {
     return (
       <div className={classes}>
         {title && (
-          <div className="slick-section-header">
-            <span className="slick-title">{title}</span>
+          <div className="section-header">
+            <span className="title">{title}</span>
           </div>
         )}
         <Slider {...settings}>{children}</Slider>

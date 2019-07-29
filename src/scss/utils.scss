@@ -1,0 +1,13 @@
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: calc(5px + .2vw);
+  align-items: baseline;
+  min-height: 33px;
+
+  .title {
+    font-size: calc(20px + .2vw);
+    color: #f26f21;
+    font-weight: bolder;
+  }
+}
