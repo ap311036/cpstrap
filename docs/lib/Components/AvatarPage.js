@@ -11,7 +11,7 @@ export default class AvatarPage extends React.Component {
   render() {
     return (
       <div>
-        <PageTitle title="Avatar" />
+        <PageTitle title="Avatar" className="section-header" />
         <div className="docs-example">
           <AvatarExample />
         </div>
@@ -24,7 +24,7 @@ export default class AvatarPage extends React.Component {
         <SectionTitle>Properties</SectionTitle>
         <pre>
           <PrismCode className="language-jsx">
-{`Avatar.propTypes = {
+            {`Avatar.propTypes = {
   alt: PropTypes.string, // default: ''
 }`}
           </PrismCode>
