@@ -26,4 +26,9 @@ export SoundIcon from "./SoundIcon";
 export CPClipboard from "./CPClipboard";
 export MetaData from './MetaData';
 export ImagePlaceHolder from "./ImagePlaceHolder";
+export TabList from "./TabList";
+// -- APPEND ITEMS HERE --
+
+
+
 export * as Util from './utils';

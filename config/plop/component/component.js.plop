@@ -1,0 +1,10 @@
+import React from 'react';
+
+const {{pascalCase componentName}} = (props) => {
+    return <div />;
+};
+
+{{pascalCase componentName}}.defaultProps = {
+};
+
+export default {{pascalCase componentName}};

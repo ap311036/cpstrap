@@ -1,6 +1,6 @@
 {
   "name": "cpstrap",
-  "version": "1.0.39",
+  "version": "1.0.40",
   "description": "CatchPlay UI Library",
   "main": "lib/index.js",
   "sideEffects": false,
@@ -9,6 +9,7 @@
     "test": "cross-env SKIP_PREFLIGHT_CHECK=true react-app-rewired test --env=jsdom",
     "cover": "npm test -- --coverage",
     "start": "webpack-dev-server --config ./webpack.docs.config.js --watch",
+    "plop": "plop",
     "build-css": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/index.scss dist/css/index.css && npm run copy-scss",
     "copy-scss": "rm -rf lib/scss && cp -r src/scss lib/scss",
     "build:docs": "cross-env WEBPACK_BUILD=production webpack --config ./webpack.docs.config.js --progress --colors",
@@ -49,8 +50,8 @@
     "react-lifecycles-compat": "^3.0.4",
     "react-lines-ellipsis": "^0.14.1",
     "react-popper": "^1.3.3",
-    "react-transition-group": "^2.3.1",
-    "react-slick": "^0.24.0"
+    "react-slick": "^0.24.0",
+    "react-transition-group": "^2.3.1"
   },
   "peerDependencies": {
     "react": "^16.3.0",
@@ -91,6 +92,9 @@
     "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.12.0",
+    "plop": "^2.4.0",
+    "plop-prettier": "^2.0.1",
+    "prettier": "^1.18.2",
     "raw-loader": "^1.0.0",
     "react": "^16.3.2",
     "react-app-rewired": "^1.6.2",

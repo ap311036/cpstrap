@@ -24,6 +24,8 @@ const paths = [
   "/components/shareicon/",
   "/components/slick/",
   "/components/videolabel/",
+  "/components/tablist/",
+  // -- APPEND ITEMS HERE --
   "/utilities/",
   "/utilities/colors/",
   "/utilities/clearfix/",

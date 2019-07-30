@@ -58,6 +58,13 @@ const items = [
     name: "VideoLabel",
     to: "/components/videolabel/"
   }
+  ,
+  {
+    name: "TabList",
+    to: "/components/tablist/"
+  }
+  // -- APPEND ITEMS HERE --
+
 ];
 
 function Components(props) {
