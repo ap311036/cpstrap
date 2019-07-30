@@ -1,0 +1,14 @@
+import React from 'react';
+import { {{pascalCase componentName}} } from 'cpstrap';
+
+const Example = (props) => {
+  return (
+    <div className="row">
+      <div className="col-md-6 col-lg-6">
+        <{{pascalCase componentName}} />
+      </div>
+    </div>
+  );
+};
+
+export default Example;

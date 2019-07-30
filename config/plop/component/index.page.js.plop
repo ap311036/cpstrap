@@ -1,0 +1,35 @@
+/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+import React from 'react';
+import { PrismCode } from 'react-prism';
+import PageTitle from '../UI/PageTitle';
+import SectionTitle from '../UI/SectionTitle';
+
+import {{pascalCase componentName}}Example from "../examples/{{pascalCase componentName}}";
+const {{pascalCase componentName}}ExampleSource = require("!!raw-loader!../examples/{{pascalCase componentName}}");
+
+export default class {{pascalCase componentName}}Page extends React.Component {
+  render() {
+    return (
+      <div>
+        <PageTitle title="{{pascalCase componentName}}" className="section-header" />
+        <div className="docs-example">
+          <{{pascalCase componentName}}Example />
+        </div>
+        <pre>
+          <PrismCode className="language-jsx">
+            { {{pascalCase componentName}}ExampleSource }
+          </PrismCode>
+        </pre>
+
+        <SectionTitle>Properties</SectionTitle>
+        <pre>
+          <PrismCode className="language-jsx">
+{`{{pascalCase componentName}}.propTypes = {
+  alt: PropTypes.string, // default: ''
+}`}
+          </PrismCode>
+        </pre>
+      </div>
+    );
+  }
+}

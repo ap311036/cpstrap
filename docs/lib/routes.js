@@ -14,6 +14,7 @@ import ShareIconPage from "./Components/ShareIconPage";
 import MetaDataPage from "./Components/MetaDataPage";
 import ButtonPage from "./Components/ButtonPage";
 import LabelPage from "./Components/LabelPage";
+import TabListPage from "./Components/TabListPage";
 import ButtonGroupPage from "./Components/ButtonGroupPage";
 import ClearfixPage from './Utilities/ClearfixPage';
 import ColorsPage from './Utilities/ColorsPage';
@@ -37,6 +38,7 @@ const routes = (
       <Route path="label/" component={LabelPage} />
       <Route path="icon/" component={IconPage} />
       <Route path="metadata/" component={MetaDataPage} />
+      <Route path="tablist/" component={TabListPage} />
       <Route path="slick/" component={SlickPage} />
       <Route path="shareicon/" component={ShareIconPage} />
       <Route path="playicon/" component={PlayIconPage} />

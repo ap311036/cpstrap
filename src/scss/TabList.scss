@@ -1,0 +1,16 @@
+.tab-list {
+  .item {
+    font-weight: normal;
+    color: #efefef;
+    padding: calc(5px + .1vw) calc(10px + .1vw);
+    display: inline-block;
+    margin: 0 calc(6px + .1vw) calc(6px + .1vw) 0;
+    text-transform: capitalize;
+    background: #3a3a3a;
+    cursor: pointer;
+
+    @media (min-width: 1400px) {
+      font-size: calc(14px + 0.2vw);
+    }
+  }
+}
