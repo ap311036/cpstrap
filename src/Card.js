@@ -137,7 +137,17 @@ class Card extends React.Component {
               alt="placeholder"
             />
             <ImagePlaceHolder />
-            <img className="movie-card-image" src={src} alt="poster" />
+            <img
+              className="movie-card-image"
+              src={src}
+              ref={ref => (this.cover = ref)}
+              alt="poster"
+              onLoad={() => {
+                if (this.cover) {
+                  this.cover.style.opacity = 1;
+                }
+              }}
+            />
             {playicon && <PlayIcon />}
           </div>
           <div className="movie-card-content">

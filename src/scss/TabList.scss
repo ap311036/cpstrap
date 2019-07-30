@@ -12,5 +12,10 @@
     @media (min-width: 1400px) {
       font-size: calc(14px + 0.2vw);
     }
+
+    &:hover {
+      background: #525252;
+      color: #fff;
+    }
   }
 }
