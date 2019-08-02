@@ -5,7 +5,7 @@ const Example = (props) => {
   return (
     <div className="row">
       <div className="col-md-6 col-lg-6">
-        <Avatar src="https://dd73pvjtftvi1.cloudfront.net/allisonlin/allisonlin-400-15504725784164.jpg" />
+        <Avatar src="https://dd73pvjtftvi1.cloudfront.net/allisonlin/allisonlin-400-1550472578464.jpg" />
       </div>
       <div className="col-md-6 col-lg-6">
         <Avatar
