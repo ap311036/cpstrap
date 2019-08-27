@@ -10,19 +10,19 @@
     width: 100%;
   }
 
-  &:not(.slider--open) .item:hover .show-details-button {
+  &:not(&--open) .item:hover .show-details-button {
     opacity: 1;
   }
 
-  &:not(.slider--open) .item:hover {
+  &:not(&--open) .item:hover {
     transform: scale(1.5) !important;
   }
 
-  &:not(.slider--open):hover .item {
+  &:not(&--open):hover .item {
     transform: translateX(-25%);
   }
 
-  &:not(.slider--open) .item:hover ~ .item {
+  &:not(&--open) .item:hover ~ .item {
     transform: translateX(25%);
   }
 }

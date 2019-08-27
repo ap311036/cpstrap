@@ -1,6 +1,6 @@
 import React from 'react';
 import IconArrowDown from './../Icons/IconArrowDown'
-import './ShowDetailsButton.scss'
+// import './ShowDetailsButton.scss'
 
 const ShowDetailsButton = ({ onClick }) => (
   <button onClick={onClick} className="show-details-button">
