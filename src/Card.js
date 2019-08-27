@@ -22,16 +22,19 @@ class Card extends React.Component {
   _onMouseEnterHandler() {
     const { hover } = this.state;
 
-    clearTimeout(this.hoverTimeOut);
+    // clearTimeout(this.hoverTimeOut);
 
     if (!hover) {
-      console.log("onEnter");
-      this.setState(
-        {
-          hover: true
-        },
-        this.activeZoom
-      );
+      setTimeout(() => {
+        console.log("onEnter");
+        this.setState(
+          {
+            hover: true,
+            zoom: true
+          },
+          this.activeZoom
+        );
+      }, 400);
     }
   }
   _onMouseLeaveHandler() {
@@ -52,7 +55,7 @@ class Card extends React.Component {
           this.inactiveZoom
         );
       }
-    }, 400);
+    }, 390);
   }
   inactiveZoom() {
     const zoomEl = this.zoom;
@@ -100,12 +103,12 @@ class Card extends React.Component {
       zoomEl.classList.add("center");
     }
 
-    this.hoverTimeOut = setTimeout(() => {
+    // this.hoverTimeOut = setTimeout(() => {
       if (wrapperEl) {
         this.setState({ zoom: true }, () => this.onZoomOut());
       }
       onEnter(videoId);
-    }, 400);
+    // }, 400);
   }
   onZoomOut() {
     console.log("onZoomOut");

@@ -27,9 +27,7 @@ const Example = (props) => {
             key={index}
             labelText={index <= 3 && "免費"}
           >
-            {index === 4 && (
-              <EpisodeCard src="https://dkfhw9rzsr80z.cloudfront.net/PTS-TW-D0001-01-0001/artworks/posters/PTS-TW-D0001-01-0001-E272.jpg" />
-            )}
+            <EpisodeCard src="https://dkfhw9rzsr80z.cloudfront.net/PTS-TW-D0001-01-0001/artworks/posters/PTS-TW-D0001-01-0001-E272.jpg" />
           </Card>
         );
       })}
