@@ -25,6 +25,7 @@ const paths = [
   "/components/slick/",
   "/components/videolabel/",
   "/components/tablist/",
+    "/components/scrolllist/",
   // -- APPEND ITEMS HERE --
   "/utilities/",
   "/utilities/colors/",

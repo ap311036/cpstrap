@@ -27,6 +27,7 @@ export CPClipboard from "./CPClipboard";
 export MetaData from './MetaData';
 export ImagePlaceHolder from "./ImagePlaceHolder";
 export TabList from "./TabList";
+export Slider from "./Slider/NetflixSlider";
 // -- APPEND ITEMS HERE --
 
 

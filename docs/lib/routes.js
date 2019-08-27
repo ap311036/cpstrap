@@ -16,6 +16,7 @@ import ButtonPage from "./Components/ButtonPage";
 import LabelPage from "./Components/LabelPage";
 import TabListPage from "./Components/TabListPage";
 import ButtonGroupPage from "./Components/ButtonGroupPage";
+import SliderPage from "./Components/SliderPage";
 import ClearfixPage from './Utilities/ClearfixPage';
 import ColorsPage from './Utilities/ColorsPage';
 import NotFound from './NotFound';
@@ -40,6 +41,7 @@ const routes = (
       <Route path="metadata/" component={MetaDataPage} />
       <Route path="tablist/" component={TabListPage} />
       <Route path="slick/" component={SlickPage} />
+      <Route path="slider/" component={SliderPage} />
       <Route path="shareicon/" component={ShareIconPage} />
       <Route path="playicon/" component={PlayIconPage} />
       <Route path="videolabel/" component={VideoLabelPage} />
