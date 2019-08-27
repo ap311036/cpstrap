@@ -6,7 +6,7 @@ import SlideButton from './SlideButton'
 import SliderWrapper from './SliderWrapper'
 import useSliding from './useSliding'
 import useSizeElement from './useSizeElement'
-import './Slider.scss'
+// import './Slider.scss'
 
 const Slider = ({ children, activeSlide }) => {
   const [currentSlide, setCurrentSlide] = useState(activeSlide);

@@ -1,6 +1,6 @@
 import React from 'react';
 import IconCross from './../Icons/IconCross';
-import './Content.scss';
+// import './Content.scss';
 
 const Content = ({ movie, onClose }) => (
   <div className="content">
