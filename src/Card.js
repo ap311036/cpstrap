@@ -124,7 +124,8 @@ class Card extends React.Component {
       labelText,
       children,
       playicon,
-      destroyPopupOnHide
+      destroyPopupOnHide,
+      onEnter
     } = this.props;
     const { zoom, hover } = this.state;
     const wrapperClass = classNames("movie-card", { zoom: zoom });
@@ -143,6 +144,7 @@ class Card extends React.Component {
         }}
         popup={children}
         destroyPopupOnHide={destroyPopupOnHide}
+        onMouseEnter={onEnter}
         // onMouseOver={this._onMouseEnterHandler}
         // onMouseLeave={this._onMouseLeaveHandler}
         className={wrapperClass}
