@@ -118,7 +118,14 @@ class Card extends React.Component {
     console.log("goItempage");
   }
   render() {
-    const { src, title, labelText, children, playicon } = this.props;
+    const {
+      src,
+      title,
+      labelText,
+      children,
+      playicon,
+      destroyPopupOnHide
+    } = this.props;
     const { zoom, hover } = this.state;
     const wrapperClass = classNames("movie-card", { zoom: zoom });
     const zoomClass = classNames("movie-card-zoom", { hover: hover });
@@ -135,6 +142,7 @@ class Card extends React.Component {
           }
         }}
         popup={children}
+        destroyPopupOnHide={destroyPopupOnHide}
         // onMouseOver={this._onMouseEnterHandler}
         // onMouseLeave={this._onMouseLeaveHandler}
         className={wrapperClass}
@@ -182,7 +190,8 @@ Card.defaultProps = {
   onClick: () => {},
   onEnter: () => {},
   playicon: false,
-  children: <div />
+  children: <div />,
+  destroyPopupOnHide: true
 };
 
 Card.propTypes = propTypes;
