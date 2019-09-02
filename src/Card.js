@@ -15,108 +15,108 @@ class Card extends React.Component {
       hover: false,
       zoom: false
     };
-    this._onMouseEnterHandler = this._onMouseEnterHandler.bind(this);
-    this._onMouseLeaveHandler = this._onMouseLeaveHandler.bind(this);
+    // this._onMouseEnterHandler = this._onMouseEnterHandler.bind(this);
+    // this._onMouseLeaveHandler = this._onMouseLeaveHandler.bind(this);
     this.goItempage = this.goItempage.bind(this);
-    this.hoverTimeOut = null;
+    // this.hoverTimeOut = null;
   }
-  _onMouseEnterHandler() {
-    const { hover } = this.state;
+  // _onMouseEnterHandler() {
+  //   const { hover } = this.state;
 
-    // clearTimeout(this.hoverTimeOut);
+  //   // clearTimeout(this.hoverTimeOut);
 
-    if (!hover) {
-      setTimeout(() => {
-        console.log("onEnter");
-        this.setState(
-          {
-            hover: true,
-            zoom: true
-          },
-          this.activeZoom
-        );
-      }, 400);
-    }
-  }
-  _onMouseLeaveHandler() {
+  //   if (!hover) {
+  //     setTimeout(() => {
+  //       console.log("onEnter");
+  //       this.setState(
+  //         {
+  //           hover: true,
+  //           zoom: true
+  //         },
+  //         this.activeZoom
+  //       );
+  //     }, 400);
+  //   }
+  // }
+  // _onMouseLeaveHandler() {
 
-    clearTimeout(this.hoverTimeOut);
+  //   clearTimeout(this.hoverTimeOut);
 
-    this.setState({
-      zoom: false
-    });
+  //   this.setState({
+  //     zoom: false
+  //   });
 
-    setTimeout(() => {
-      if (this.poster) {
-        console.log("onLeave");
-        this.setState(
-          {
-            hover: false
-          },
-          this.inactiveZoom
-        );
-      }
-    }, 390);
-  }
-  inactiveZoom() {
-    const zoomEl = this.zoom;
-    setTimeout(() => {
-      zoomEl.classList.remove("left", "right", "center", "bottom");
-    }, 400);
-  }
-  activeZoom() {
-    // do something for hover/hover sibling item if you want.
-    const { zoomEffect, onEnter, videoId } = this.props;
+  //   setTimeout(() => {
+  //     if (this.poster) {
+  //       console.log("onLeave");
+  //       this.setState(
+  //         {
+  //           hover: false
+  //         },
+  //         this.inactiveZoom
+  //       );
+  //     }
+  //   }, 390);
+  // }
+  // inactiveZoom() {
+  //   const zoomEl = this.zoom;
+  //   setTimeout(() => {
+  //     zoomEl.classList.remove("left", "right", "center", "bottom");
+  //   }, 400);
+  // }
+  // activeZoom() {
+  //   // do something for hover/hover sibling item if you want.
+  //   const { zoomEffect, onEnter, videoId } = this.props;
 
-    if (!this.zoom || typeof window === "undefined") {
-      return;
-    }
+  //   if (!this.zoom || typeof window === "undefined") {
+  //     return;
+  //   }
 
-    const wrapperEl = this.poster;
-    const zoomEl = this.zoom;
-    const elRect = wrapperEl.getBoundingClientRect();
-    let hasPositionChanged = false;
-    // let target = wrapperEl.parentNode.parentNode.parentNode;
-    // console.log(target.offsetWidth);
-    if (
-      elRect.left < 0 ||
-      elRect.left + window.innerWidth * 0.04 > window.innerWidth
-    ) {
-      return;
-    }
+  //   const wrapperEl = this.poster;
+  //   const zoomEl = this.zoom;
+  //   const elRect = wrapperEl.getBoundingClientRect();
+  //   let hasPositionChanged = false;
+  //   // let target = wrapperEl.parentNode.parentNode.parentNode;
+  //   // console.log(target.offsetWidth);
+  //   if (
+  //     elRect.left < 0 ||
+  //     elRect.left + window.innerWidth * 0.04 > window.innerWidth
+  //   ) {
+  //     return;
+  //   }
 
-    if (elRect.right + elRect.width > window.innerWidth) {
-      hasPositionChanged = true;
-      zoomEl.classList.add("right");
-    }
+  //   if (elRect.right + elRect.width > window.innerWidth) {
+  //     hasPositionChanged = true;
+  //     zoomEl.classList.add("right");
+  //   }
 
-    if (elRect.left < 120) {
-      hasPositionChanged = true;
-      zoomEl.classList.add("left");
-    }
+  //   if (elRect.left < 120) {
+  //     hasPositionChanged = true;
+  //     zoomEl.classList.add("left");
+  //   }
 
-    if (elRect.top < 250 && zoomEffect === "zoom") {
-      hasPositionChanged = true;
-      zoomEl.classList.add("top");
-    }
+  //   if (elRect.top < 250 && zoomEffect === "zoom") {
+  //     hasPositionChanged = true;
+  //     zoomEl.classList.add("top");
+  //   }
 
-    if (!hasPositionChanged) {
-      zoomEl.classList.add("center");
-    }
+  //   if (!hasPositionChanged) {
+  //     zoomEl.classList.add("center");
+  //   }
 
-    // this.hoverTimeOut = setTimeout(() => {
-      if (wrapperEl) {
-        this.setState({ zoom: true }, () => this.onZoomOut());
-      }
-      onEnter(videoId);
-    // }, 400);
-  }
-  onZoomOut() {
-    console.log("onZoomOut");
-  }
-  goItempage() {
-    console.log("goItempage");
-  }
+  //   // this.hoverTimeOut = setTimeout(() => {
+  //     if (wrapperEl) {
+  //       this.setState({ zoom: true }, () => this.onZoomOut());
+  //     }
+  //     onEnter(videoId);
+  //   // }, 400);
+  // }
+  // onZoomOut() {
+  //   console.log("onZoomOut");
+  // }
+  // goItempage() {
+  //   console.log("goItempage");
+  // }
   render() {
     const {
       src,
@@ -129,7 +129,7 @@ class Card extends React.Component {
     } = this.props;
     const { zoom, hover } = this.state;
     const wrapperClass = classNames("movie-card", { zoom: zoom });
-    const zoomClass = classNames("movie-card-zoom", { hover: hover });
+    // const zoomClass = classNames("movie-card-zoom", { hover: hover });
     return (
       <Trigger
         action={["hover"]}
