@@ -114,9 +114,9 @@ class Card extends React.Component {
   // onZoomOut() {
   //   console.log("onZoomOut");
   // }
-  // goItempage() {
-  //   console.log("goItempage");
-  // }
+  goItempage() {
+    console.log("goItempage");
+  }
   render() {
     const {
       src,
