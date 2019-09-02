@@ -123,8 +123,8 @@ class Card extends React.Component {
     const zoomClass = classNames("movie-card-zoom", { hover: hover });
     return (
       <div
-        onMouseOver={this._onMouseEnterHandler}
-        onMouseLeave={this._onMouseLeaveHandler}
+        // onMouseOver={this._onMouseEnterHandler}
+        // onMouseLeave={this._onMouseLeaveHandler}
         className={wrapperClass}
         ref={ref => (this.poster = ref)}
       >
@@ -159,9 +159,9 @@ class Card extends React.Component {
           </div>
         </div>
         {
-          <div className={zoomClass} ref={ref => (this.zoom = ref)}>
+          /*<div className={zoomClass} ref={ref => (this.zoom = ref)}>
             {hover && children && children}
-          </div>
+          </div>*/
         }
       </div>
     );
