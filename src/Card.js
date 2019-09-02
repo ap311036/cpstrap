@@ -4,6 +4,7 @@ import classNames from "classnames";
 import PlayIcon from "./PlayIcon";
 import Label from "./Label";
 import ImagePlaceHolder from "./ImagePlaceHolder";
+import Trigger from "rc-trigger";
 const propTypes = {
   children: PropTypes.node
 };
@@ -122,7 +123,18 @@ class Card extends React.Component {
     const wrapperClass = classNames("movie-card", { zoom: zoom });
     const zoomClass = classNames("movie-card-zoom", { hover: hover });
     return (
-      <div
+      <Trigger
+        action={["hover"]}
+        popupPlacement="centerCenter"
+        popupClassName="point-popup"
+        popupTransitionName="fade"
+        mouseEnterDelay={0.4}
+        builtinPlacements={{
+          centerCenter: {
+            points: ["cc", "cc"]
+          }
+        }}
+        popup={children}
         // onMouseOver={this._onMouseEnterHandler}
         // onMouseLeave={this._onMouseLeaveHandler}
         className={wrapperClass}
@@ -158,12 +170,10 @@ class Card extends React.Component {
             {labelText && <Label text={labelText} />}
           </div>
         </div>
-        {
-          /*<div className={zoomClass} ref={ref => (this.zoom = ref)}>
+        {/*<div className={zoomClass} ref={ref => (this.zoom = ref)}>
             {hover && children && children}
-          </div>*/
-        }
-      </div>
+          </div>*/}
+      </Trigger>
     );
   }
 }
