@@ -130,13 +130,13 @@ class Card extends React.Component {
     } = this.props;
     const { zoom, hover } = this.state;
     const wrapperClass = classNames("movie-card", { zoom: zoom });
-    // const zoomClass = classNames("movie-card-zoom", { hover: hover });
+    const zoomClass = classNames("movie-card-zoom", { hover: hover });
     return (
       <Trigger
         getPopupContainer={getPopupContainer}
         action={["hover"]}
         popupPlacement="center"
-        popupClassName="point-popup"
+        popupClassName={zoomClass}
         popupTransitionName="fade"
         mouseEnterDelay={0.4}
         builtinPlacements={{
