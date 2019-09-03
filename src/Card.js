@@ -125,20 +125,22 @@ class Card extends React.Component {
       children,
       playicon,
       destroyPopupOnHide,
-      onEnter
+      onEnter,
+      getPopupContainer
     } = this.props;
     const { zoom, hover } = this.state;
     const wrapperClass = classNames("movie-card", { zoom: zoom });
     // const zoomClass = classNames("movie-card-zoom", { hover: hover });
     return (
       <Trigger
+        getPopupContainer={getPopupContainer}
         action={["hover"]}
-        popupPlacement="centerCenter"
+        popupPlacement="center"
         popupClassName="point-popup"
         popupTransitionName="fade"
         mouseEnterDelay={0.4}
         builtinPlacements={{
-          centerCenter: {
+          center: {
             points: ["cc", "cc"]
           }
         }}
@@ -193,7 +195,7 @@ Card.defaultProps = {
   onEnter: () => {},
   playicon: false,
   children: <div />,
-  destroyPopupOnHide: true
+  destroyPopupOnHide: true,
 };
 
 Card.propTypes = propTypes;

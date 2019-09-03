@@ -1,6 +1,6 @@
 {
   "name": "cpstrap",
-  "version": "1.0.57",
+  "version": "1.0.58",
   "description": "CatchPlay UI Library",
   "main": "lib/index.js",
   "sideEffects": false,
