@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Slick, EpisodeCard } from "cpstrap";
+import { Card, Slick } from "cpstrap";
 
 const data = [
   "https://dkfhw9rzsr80z.cloudfront.net/PTS-TW-D0001-01-0001/artworks/posters/PTS-TW-D0001-01-0001-E272.jpg",
@@ -31,9 +31,10 @@ const Example = (props) => {
             playicon={true}
             key={index}
             labelText={index <= 3 && "免費"}
-            getPopupContainer={getPopupContainer}
+            // getPopupContainer={getPopupContainer}
+            destroyPopupOnHide={false}
           >
-            <p style={{ padding: 10, background: "gray" }}>{index + 1}</p>
+            <p style={{ padding: 200, background: "gray" }}>{index + 1}</p>
           </Card>
         );
       })}
