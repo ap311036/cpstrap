@@ -132,47 +132,7 @@ class Card extends React.Component {
     const wrapperClass = classNames("movie-card", { zoom: zoom });
     // const zoomClass = classNames("movie-card-zoom", { hover: hover });
     return (
-      <Trigger
-        getPopupContainer={getPopupContainer}
-        action={["hover"]}
-        popupPlacement="center"
-        popupClassName="point-popup"
-        popupTransitionName="fade"
-        mouseEnterDelay={0.4}
-        builtinPlacements={{
-          center: {
-            points: ["cc", "cr", "cl"],
-            overflow: {
-              adjustX: 1,
-              adjustY: 1
-            },
-            offset: [-4, 0],
-            targetOffset: [0, 0]
-          },
-          left: {
-            points: ["cr", "cl"],
-            overflow: {
-              adjustX: 1,
-              adjustY: 1
-            },
-            offset: [-4, 0],
-            targetOffset: [0, 0]
-          },
-          right: {
-            points: ["cl", "cr"],
-            overflow: {
-              adjustX: 1,
-              adjustY: 1
-            },
-            offset: [4, 0],
-            targetOffset: [0, 0]
-          }
-        }}
-        popup={children}
-        destroyPopupOnHide={destroyPopupOnHide}
-        onMouseEnter={onEnter}
-        // onMouseOver={this._onMouseEnterHandler}
-        // onMouseLeave={this._onMouseLeaveHandler}
+      <div
         className={wrapperClass}
         ref={ref => (this.poster = ref)}
       >
@@ -209,7 +169,7 @@ class Card extends React.Component {
         {/*<div className={zoomClass} ref={ref => (this.zoom = ref)}>
             {hover && children && children}
           </div>*/}
-      </Trigger>
+      </div>
     );
   }
 }
