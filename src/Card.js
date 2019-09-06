@@ -141,7 +141,31 @@ class Card extends React.Component {
         mouseEnterDelay={0.4}
         builtinPlacements={{
           center: {
-            points: ["cc", "cc"]
+            points: ["cc", "cr", "cl"],
+            overflow: {
+              adjustX: 1,
+              adjustY: 1
+            },
+            offset: [-4, 0],
+            targetOffset: [0, 0]
+          },
+          left: {
+            points: ["cr", "cl"],
+            overflow: {
+              adjustX: 1,
+              adjustY: 1
+            },
+            offset: [-4, 0],
+            targetOffset: [0, 0]
+          },
+          right: {
+            points: ["cl", "cr"],
+            overflow: {
+              adjustX: 1,
+              adjustY: 1
+            },
+            offset: [4, 0],
+            targetOffset: [0, 0]
           }
         }}
         popup={children}
