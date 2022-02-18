@@ -62,6 +62,11 @@ export default (locals, callback) => {
           <link rel=icon href=/assets/favicon.ico>
           <link rel="stylesheet" href="/assets/main.css"/>
           <link rel="stylesheet" href="/assets/docs.css"/>
+          <style>
+            @supports (font: -apple-system-body) {
+              *, html { font: -apple-system-body !important; } 
+            }     
+          </style>
         </head>
         <body>
           <div id="app">${body}</div>
